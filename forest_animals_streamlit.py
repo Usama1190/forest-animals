@@ -1,9 +1,9 @@
 import streamlit as st
 
-# File name jahan animals save honge
+# File name where animals will be saved
 FILE = "forest_animals.txt"
 
-# Animals ko file se load karo
+# Load animals from the file
 def load_animals():
     try:
         with open(FILE, "r") as f:
@@ -12,7 +12,7 @@ def load_animals():
         animals = []
     return animals
 
-# Naya animal file mein save karo
+# Save new animal to the file
 def save_animal(animal):
     with open(FILE, "a") as f:
         f.write(animal + "\n")
@@ -35,3 +35,11 @@ if animal:
 
     st.subheader("🌿 Animals currently in the forest:")
     st.write(animals)
+    
+    st.session_state["animal_input"] = ""
+    
+# Author LinkedIn link
+author_name = '[Usama Israr Khan](https://www.linkedin.com/in/usama-israr-khan-3b68312ab/)'
+
+# Display author credit with LinkedIn link
+st.markdown(f"**Made by {author_name}**")

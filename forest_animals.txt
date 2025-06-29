@@ -1,4 +1,13 @@
 cat
 dog
-dinasour
+loin
+tiger
 elephant
+crocodile
+zebra
+aligator
+perrot
+duck
+mouse
+leopard
+horse
